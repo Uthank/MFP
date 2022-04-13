@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
         if (_weaponHolder.transform.childCount > 0)
             Destroy(_weaponHolder.transform.GetChild(0));
 
-        if (weapon.Prefab != null)
-            Instantiate(weapon.Prefab, _weaponHolder.transform);
+        if (weapon.Model != null)
+            Instantiate(weapon.Model, _weaponHolder.transform);
     }
 }

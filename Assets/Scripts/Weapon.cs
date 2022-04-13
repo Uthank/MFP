@@ -7,9 +7,9 @@ public abstract class Weapon : Item
 {
     [SerializeField] protected WeaponTypes _type;
     [SerializeField] protected float _damage;
-    [SerializeField] protected GameObject _prefab = null;
+    [SerializeField] protected GameObject _model = null;
 
     public WeaponTypes Type => _type;
     public float Damage => _damage;
-    public GameObject Prefab => _prefab;
+    public GameObject Model => _model;
 }

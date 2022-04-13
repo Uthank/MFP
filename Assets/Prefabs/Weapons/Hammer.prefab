@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 4
   _damage: 120
-  _prefab: {fileID: 110856075971997399, guid: dffba642b29419b40a790699d42073b5, type: 3}
+  _model: {fileID: 110856075971997399, guid: dffba642b29419b40a790699d42073b5, type: 3}
