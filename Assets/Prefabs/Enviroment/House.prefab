@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4847692129084125000}
-  - component: {fileID: 8424455737849880813}
-  - component: {fileID: 5984539063134966823}
   - component: {fileID: 7172368355897034495}
+  - component: {fileID: 7852607989574446348}
+  - component: {fileID: 2276886318786389214}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -33,15 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8424455737849880813
-MeshFilter:
+--- !u!65 &7172368355897034495
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191989436030940658}
-  m_Mesh: {fileID: -8936622394817868014, guid: 4dbf0b74417b77c458b8d0c910f79285, type: 3}
---- !u!23 &5984539063134966823
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.4049263, y: 5.4582005, z: 5.4049263}
+  m_Center: {x: -0.000030517578, y: 2.7471933, z: -0.00000023841858}
+--- !u!23 &7852607989574446348
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4419022991293914256, guid: 4dbf0b74417b77c458b8d0c910f79285, type: 3}
+  - {fileID: 4419022991293914256, guid: d978091618854b946ae2f03ee851d3c4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,16 +85,11 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7172368355897034495
-BoxCollider:
+--- !u!33 &2276886318786389214
+MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191989436030940658}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.4049263, y: 5.4582005, z: 5.4049263}
-  m_Center: {x: -0.000030517578, y: 2.7471933, z: -0.00000023841858}
+  m_Mesh: {fileID: -8936622394817868014, guid: d978091618854b946ae2f03ee851d3c4, type: 3}

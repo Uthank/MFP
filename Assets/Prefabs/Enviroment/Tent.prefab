@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1578643098510124316}
   - component: {fileID: 3605738195534268956}
   - component: {fileID: 3785109572255439185}
+  - component: {fileID: 8941672585315558792}
   m_Layer: 0
   m_Name: Cube.018
   m_TagString: Untagged
@@ -39,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211666493206383109}
-  m_Mesh: {fileID: -5928785198427282456, guid: cb42bf33aa2ef704fa155183c5718029, type: 3}
+  m_Mesh: {fileID: -5928785198427282456, guid: 02aae2a45553d2c43ae0fe1c7e3905f6, type: 3}
 --- !u!23 &3785109572255439185
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5562491534196222660, guid: cb42bf33aa2ef704fa155183c5718029, type: 3}
+  - {fileID: 5562491534196222660, guid: 02aae2a45553d2c43ae0fe1c7e3905f6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8941672585315558792
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211666493206383109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5928785198427282456, guid: 02aae2a45553d2c43ae0fe1c7e3905f6, type: 3}
 --- !u!1 &2334941435679014148
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +166,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210362326712258580}
-  m_Mesh: {fileID: -3537709356157935800, guid: cb42bf33aa2ef704fa155183c5718029, type: 3}
+  m_Mesh: {fileID: -3537709356157935800, guid: 02aae2a45553d2c43ae0fe1c7e3905f6, type: 3}
 --- !u!23 &1236212283447912591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -170,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7554955246412475340, guid: cb42bf33aa2ef704fa155183c5718029, type: 3}
+  - {fileID: 7554955246412475340, guid: 02aae2a45553d2c43ae0fe1c7e3905f6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
