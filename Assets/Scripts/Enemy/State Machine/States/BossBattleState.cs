@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class BattleState : State
+public class BossBattleState : State
 {
     [SerializeField] private float _damage = 40;
     [SerializeField] private float _attackSpeed = 0.8f;
     [SerializeField] private IEnumerator _hit;
 
     private Animator _animator;
-    private string _hitAnimation = "Hit";
+    private string _hitAnimation = "Hit1";
     private Vector3 _direction;
     private float _rotation;
 
