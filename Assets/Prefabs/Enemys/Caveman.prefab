@@ -81,7 +81,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caveman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 920ddf6f6ee2d7549a125e9b5459de32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 920ddf6f6ee2d7549a125e9b5459de32, type: 3}
 --- !u!1001 &8030271355160708268
 PrefabInstance:
@@ -103,11 +104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: be438a0653e9e0a46a177f87a01e2b6f, type: 2}
+      objectReference: {fileID: 9100000, guid: 57852c224e9691549a36c9dc97de60fd, type: 2}
     - target: {fileID: 7888266884855551969, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Name
-      value: Caveman Variant
+      value: Caveman
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
@@ -117,17 +118,17 @@ PrefabInstance:
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -17.97436
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 17.747814
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -141.05074
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}

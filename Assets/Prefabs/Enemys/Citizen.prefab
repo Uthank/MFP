@@ -34,11 +34,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: be438a0653e9e0a46a177f87a01e2b6f, type: 2}
+      objectReference: {fileID: 9100000, guid: 7fa32518a464c67469b6eed8ba681282, type: 2}
     - target: {fileID: 7888266884855551969, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Name
-      value: Citizen Variant
+      value: Citizen
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
@@ -48,17 +48,17 @@ PrefabInstance:
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -18.057251
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 17.747814
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -145.75386
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
@@ -177,5 +177,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Citizen
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: b599be54c9e80cd4eaa626733332fb37, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b599be54c9e80cd4eaa626733332fb37, type: 3}

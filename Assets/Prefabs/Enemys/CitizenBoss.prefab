@@ -38,7 +38,7 @@ PrefabInstance:
     - target: {fileID: 7888266884855551969, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Name
-      value: CitizenBoss Variant
+      value: CitizenBoss
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
@@ -63,17 +63,17 @@ PrefabInstance:
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.584578
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 17.747814
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -147.45651
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
@@ -192,5 +192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CitizenBoss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 0910918dbfebd714083af4e9670f2405, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0910918dbfebd714083af4e9670f2405, type: 3}
