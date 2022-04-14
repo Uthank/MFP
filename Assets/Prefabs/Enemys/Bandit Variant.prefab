@@ -44,7 +44,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
@@ -54,7 +54,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
@@ -69,7 +69,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d689bc7ddee293549a45b1dd8018dced,
         type: 3}
@@ -108,6 +108,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 419477946, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925313936302672448, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: d689bc7ddee293549a45b1dd8018dced, type: 3}
+    - target: {fileID: 3925313936302672448, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: be438a0653e9e0a46a177f87a01e2b6f, type: 2}
+    - target: {fileID: 3925313936302672448, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4490519755644456795, guid: c8afd613da8e8bd4e90a46e22ce59090,

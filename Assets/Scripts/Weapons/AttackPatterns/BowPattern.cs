@@ -30,6 +30,5 @@ public class BowPattern : AttackPattern
     {
         GameObject arrow = Instantiate(_arrow, transform.position + (transform.rotation * _shootOffset), transform.rotation);
         arrow.GetComponent<Arrow>().Damage = _damage;
-        Debug.Log(_damage);
     }
 }

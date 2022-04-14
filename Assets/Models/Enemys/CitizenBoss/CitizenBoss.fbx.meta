@@ -1,20 +1,23 @@
 fileFormatVersion: 2
-guid: c39df21d201cb9c45a5d3c4683b51e59
+guid: 0910918dbfebd714083af4e9670f2405
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -2043598526255135584
-    second: Armature.003|BanditAttack
+      74: -2982930517799858614
+    second: Armature.005|BanditAttack
   - first:
-      74: 462866901439344420
-    second: Armature.003|BanditIdle
+      74: -828212650655930922
+    second: Armature.005|BanditIdle
   - first:
-      74: -4816454839324770804
-    second: Armature.003|BanditRun
+      74: -8289738704017755964
+    second: Armature.005|BanditRun
   - first:
-      74: 7982688311918250852
-    second: Armature.003|CitizenAttack
+      74: 5066462472907104425
+    second: Armature.005|CitizenAttack
+  - first:
+      74: -7615912981626909804
+    second: Wings|BanditRun
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -94,7 +97,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: RootBone
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -102,7 +105,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
