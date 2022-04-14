@@ -7,10 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 361926280, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 419477946, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551969, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Name
-      value: Wolf
+      value: Wolf Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
