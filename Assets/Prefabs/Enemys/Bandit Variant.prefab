@@ -81,7 +81,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bandit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: d689bc7ddee293549a45b1dd8018dced, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d689bc7ddee293549a45b1dd8018dced, type: 3}
 --- !u!1001 &4678444012431468672
 PrefabInstance:
