@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpearPattern : AttackPattern
 {
     [SerializeField] private float _attackDuration = 1;
-    [SerializeField] private Vector3 _hitboxCenter = new Vector3(3, 0, 0);
+    [SerializeField] private Vector3 _hitboxCenter = new Vector3(3, 1f, 0);
     [SerializeField] private Vector3 _hitboxHalfExtents = new Vector3(3, 1, 1);
     [SerializeField] private GameObject _particle;
 

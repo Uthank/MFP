@@ -4,7 +4,7 @@ using UnityEngine;
 public class SwordPattern : AttackPattern
 {
     [SerializeField] private float _attackDuration = 1;
-    [SerializeField] private Vector3 _hitboxCenter = new Vector3(1.5f, 0, 0);
+    [SerializeField] private Vector3 _hitboxCenter = new Vector3(1.5f, 1f, 0);
     [SerializeField] private Vector3 _hitboxHalfExtents = new Vector3(1.5f, 1, 2);
 
     public override void Awake()

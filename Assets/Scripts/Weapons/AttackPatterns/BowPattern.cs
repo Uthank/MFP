@@ -5,7 +5,7 @@ public class BowPattern : AttackPattern
 {
     [SerializeField] private float _attackDuration = 1;
     [SerializeField] private GameObject _arrow;
-    [SerializeField] private Vector3 _shootOffset = new Vector3(1.5f, 0, 0);
+    [SerializeField] private Vector3 _shootOffset = new Vector3(1.5f, 1f, 0);
 
     private Vector3 _arrowStartPosition;
 

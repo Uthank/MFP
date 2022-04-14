@@ -5,7 +5,7 @@ using UnityEngine;
 public class HammerPattern : AttackPattern
 {
     [SerializeField] private float _attackDuration = 1;
-    [SerializeField] private Vector3 _hitboxCenter = new Vector3(3f, 0, 0);
+    [SerializeField] private Vector3 _hitboxCenter = new Vector3(3f, 1f, 0);
     [SerializeField] private Vector3 _hitboxHalfExtents = new Vector3(3f, 1f, 3f);
     [SerializeField] private GameObject _particle;
 
