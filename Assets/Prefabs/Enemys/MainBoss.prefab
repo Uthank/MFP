@@ -34,7 +34,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2686053941290298570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a59ce6fa53038aa489ddaedf78f4af34, type: 3}
   m_Name: 
@@ -169,7 +169,7 @@ PrefabInstance:
     - target: {fileID: 7888266884855551969, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Name
-      value: MainBoss Variant
+      value: MainBoss
       objectReference: {fileID: 0}
     - target: {fileID: 7888266884855551975, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
