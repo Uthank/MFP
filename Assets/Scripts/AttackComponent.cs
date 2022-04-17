@@ -19,7 +19,7 @@ public class AttackComponent : MonoBehaviour
         _input.Enable();
     }
 
-    public void SetAttack(Weapon weapon)
+    public void SetAttackPattern(Weapon weapon)
     {
         _damage = weapon.Damage;
 

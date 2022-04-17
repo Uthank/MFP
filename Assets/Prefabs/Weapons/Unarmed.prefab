@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7451117068464982133}
   - component: {fileID: 8154899923966239036}
+  - component: {fileID: -756498135657861508}
   m_Layer: 0
   m_Name: Unarmed
   m_TagString: Untagged
@@ -46,7 +47,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _damage: 10
-  _prefab: {fileID: 0}
+  _model: {fileID: 0}
+  _attackPattern: {fileID: -756498135657861508}
+--- !u!114 &-756498135657861508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511024516630309071}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1eb9ad820d2beb4ab5b8abba2024a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackDuration: 1
+  _hitboxCenter: {x: 1.5, y: 1, z: 0}
+  _hitboxHalfExtents: {x: 1.5, y: 1, z: 1}
+  _particle: {fileID: 0}
 --- !u!1 &7922095923888334014
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,7 +60,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroAttack
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -79,7 +79,28 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4500824
+        functionName: HitTest
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.77938366
+        functionName: HitTest
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5813953
+        functionName: HitTest
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -89,7 +110,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroAttackBow
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,7 +139,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroAttackHammer
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -147,7 +168,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroAttackSpear
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -176,7 +197,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroAttackSword
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -205,7 +226,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroIdle
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -234,7 +255,7 @@ ModelImporter:
       takeName: ArmatureHero|HeroRun
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

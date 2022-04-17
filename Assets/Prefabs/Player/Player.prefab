@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _damage: 30
+  RespawnPoint: {x: 0, y: 0, z: 0}
   Dying:
     m_PersistentCalls:
       m_Calls: []

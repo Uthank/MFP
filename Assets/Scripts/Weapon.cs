@@ -8,6 +8,7 @@ public abstract class Weapon : Item
     [SerializeField] protected WeaponTypes _type;
     [SerializeField] protected float _damage;
     [SerializeField] protected GameObject _model = null;
+    [SerializeField] AttackPattern _attackPattern;
 
     public WeaponTypes Type => _type;
     public float Damage => _damage;

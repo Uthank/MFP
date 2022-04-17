@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
     public void EquipWeapon(Weapon weapon)
     {
         _equippedWeapon = weapon;
-        _attackComponent.SetAttack(weapon);
+        _attackComponent.SetAttackPattern(weapon);
 
         if (_weaponHolder.transform.childCount > 0)
             Destroy(_weaponHolder.transform.GetChild(0));
