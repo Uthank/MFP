@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SpearPattern : AttackPattern
 {
-    [SerializeField] private float _attackDuration = 1;
     [SerializeField] private Vector3 _hitboxCenter = new Vector3(3, 1f, 0);
     [SerializeField] private Vector3 _hitboxHalfExtents = new Vector3(3, 1, 1);
     [SerializeField] private GameObject _particle;
@@ -12,17 +11,6 @@ public class SpearPattern : AttackPattern
     {
         _animationAttack = "AttackSpear";
         base.Awake();
-    }
-
-    protected override IEnumerator HitPattern()
-    {
-        yield return new WaitForSeconds(15f / 45f * _attackDuration);
-        Hit();
-        yield return new WaitForSeconds(10f / 45f * _attackDuration);
-        Hit();
-        yield return new WaitForSeconds(10f / 45f * _attackDuration);
-        Hit();
-        _attackCoroutine = null;
     }
 
     protected override void Hit()

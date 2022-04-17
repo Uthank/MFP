@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class AttackPattern : MonoBehaviour
 {
+    public GameObject Particles;
+
     protected float _damage;
     protected LayerMask _layerMask;
     protected string _animationAttack;
@@ -10,8 +12,6 @@ public abstract class AttackPattern : MonoBehaviour
     protected Collider[] _targets;
     protected AttackComponent _attackComponent;
     protected IEnumerator _attackCoroutine;
-
-    protected abstract IEnumerator HitPattern();
 
     public virtual void Awake()
     {
@@ -30,8 +30,6 @@ public abstract class AttackPattern : MonoBehaviour
         if (_attackCoroutine == null)
         {
             _animator.SetTrigger(_animationAttack);
-            _attackCoroutine = HitPattern();
-            StartCoroutine(_attackCoroutine);
         }
     }
 

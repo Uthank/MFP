@@ -7,20 +7,20 @@ ModelImporter:
       74: -2043598526255135584
     second: Armature.003|BanditAttack
   - first:
+      74: 5419513308442903355
+    second: Armature.003|BanditDie
+  - first:
       74: 462866901439344420
     second: Armature.003|BanditIdle
   - first:
       74: -4816454839324770804
-    second: Run
+    second: Armature.003|BanditRun
   - first:
       74: 7982688311918250852
     second: Armature.003|CitizenAttack
   - first:
-      74: 6720303635017113406
-    second: Attack
-  - first:
-      74: -3100369314251171874
-    second: Idle
+      74: -4201526251572362370
+    second: Armature.003|CitizenDie
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -50,8 +50,44 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack
+      name: Armature.003|BanditAttack
       takeName: Armature.003|BanditAttack
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.27441862
+        functionName: Attack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.003|BanditDie
+      takeName: Armature.003|BanditDie
       internalID: 0
       firstFrame: 0
       lastFrame: 60
@@ -79,7 +115,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Armature.003|BanditIdle
       takeName: Armature.003|BanditIdle
       internalID: 0
       firstFrame: 0
@@ -108,7 +144,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run
+      name: Armature.003|BanditRun
       takeName: Armature.003|BanditRun
       internalID: 0
       firstFrame: 0

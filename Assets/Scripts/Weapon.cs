@@ -5,12 +5,11 @@ using UnityEngine;
 
 public abstract class Weapon : Item
 {
-    [SerializeField] protected WeaponTypes _type;
     [SerializeField] protected float _damage;
     [SerializeField] protected GameObject _model = null;
-    [SerializeField] AttackPattern _attackPattern;
+    [SerializeField] protected GameObject _particles = null;
 
-    public WeaponTypes Type => _type;
     public float Damage => _damage;
     public GameObject Model => _model;
+    public GameObject Particles => _particles;
 }

@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         RespawnPoint = transform.position;
-        _input = GetComponent<PlayerInput>();
+        //_input = GetComponent<PlayerInput>();
         _animator = GetComponent<Animator>();
     }
 
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     public void Respawn()
     {
         transform.position = RespawnPoint;
-        _input.Enable();
+        //_input.Enable();
         _animator.SetTrigger(_respawnAnimation);
     }
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        _input.Disable();
+        //_input.Disable();
         _animator.SetTrigger(_dieAnimation);
     }
 }

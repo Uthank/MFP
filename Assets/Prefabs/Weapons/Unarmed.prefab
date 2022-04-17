@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f7d2a7a1a4bd4cac7a4f5b1bad9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 0
   _damage: 10
   _model: {fileID: 0}
-  _attackPattern: {fileID: -756498135657861508}
+  _particles: {fileID: 2107709757824418305, guid: 769870a81c7b06047b53accc0e5b97d1,
+    type: 3}
 --- !u!114 &-756498135657861508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,10 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eb9ad820d2beb4ab5b8abba2024a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Particles: {fileID: 0}
   _attackDuration: 1
   _hitboxCenter: {x: 1.5, y: 1, z: 0}
   _hitboxHalfExtents: {x: 1.5, y: 1, z: 1}
-  _particle: {fileID: 0}
 --- !u!1 &7922095923888334014
 GameObject:
   m_ObjectHideFlags: 0

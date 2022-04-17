@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24695269899664333}
   - component: {fileID: 2046517415616518931}
+  - component: {fileID: 4148903255556666665}
   m_Layer: 0
   m_Name: Hammer
   m_TagString: Untagged
@@ -43,6 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90dae47ecdb53c24cbd853c1da6bb7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 4
   _damage: 120
   _model: {fileID: 110856075971997399, guid: dffba642b29419b40a790699d42073b5, type: 3}
+  _particles: {fileID: 8893269369547795031, guid: 20ec1984d571c12489f71e4bb50128b7,
+    type: 3}
+--- !u!114 &4148903255556666665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110856075971997399}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df84552ddf07dd42ba11d4c816a571d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles: {fileID: 0}
+  _hitboxCenter: {x: 3, y: 1, z: 0}
+  _hitboxHalfExtents: {x: 3, y: 1, z: 3}
+  _particle: {fileID: 0}

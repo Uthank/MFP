@@ -2,7 +2,6 @@
 {
     private void Awake()
     {
-        _type = WeaponTypes.None;
         _damage = 10;
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812714459546420185}
   - component: {fileID: 6549820976291827237}
+  - component: {fileID: 403327428955165192}
   m_Layer: 0
   m_Name: Spear
   m_TagString: Untagged
@@ -43,6 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f1ada4b97702a408201a0b3dde0c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 3
   _damage: 20
   _model: {fileID: 4910362138932323014, guid: cb37d15c8dcd9864581729d85479db3f, type: 3}
+  _particles: {fileID: 2107709757824418305, guid: 61788e947fda5bc43a889f82525cefce,
+    type: 3}
+--- !u!114 &403327428955165192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910362138932323014}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616ad1628f4389a4aa00386670b899fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles: {fileID: 0}
+  _hitboxCenter: {x: 3, y: 1, z: 0}
+  _hitboxHalfExtents: {x: 3, y: 1, z: 1}
+  _particle: {fileID: 0}

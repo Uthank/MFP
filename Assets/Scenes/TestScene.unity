@@ -128,30 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2003871220, guid: e2892c906803d7d419616e3676089c93, type: 3}
-      propertyPath: _particle
-      value: 
-      objectReference: {fileID: 3960611969086560893, guid: 5a4aa2ca8e0e4bd4c9f1dff028892f92,
-        type: 3}
-    - target: {fileID: 2003871221, guid: e2892c906803d7d419616e3676089c93, type: 3}
-      propertyPath: _particle
-      value: 
-      objectReference: {fileID: 8893269369547795031, guid: 20ec1984d571c12489f71e4bb50128b7,
-        type: 3}
-    - target: {fileID: 2003871222, guid: e2892c906803d7d419616e3676089c93, type: 3}
-      propertyPath: _particle
-      value: 
-      objectReference: {fileID: 2107709757824418305, guid: 769870a81c7b06047b53accc0e5b97d1,
-        type: 3}
-    - target: {fileID: 2003871223, guid: e2892c906803d7d419616e3676089c93, type: 3}
-      propertyPath: _shootOffset.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688011942168403917, guid: e2892c906803d7d419616e3676089c93,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1688011942168403955, guid: e2892c906803d7d419616e3676089c93,
         type: 3}
       propertyPath: m_RootOrder
@@ -160,17 +136,17 @@ PrefabInstance:
     - target: {fileID: 1688011942168403955, guid: e2892c906803d7d419616e3676089c93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.7
+      value: -66.57
       objectReference: {fileID: 0}
     - target: {fileID: 1688011942168403955, guid: e2892c906803d7d419616e3676089c93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.098
+      value: 39.37
       objectReference: {fileID: 0}
     - target: {fileID: 1688011942168403955, guid: e2892c906803d7d419616e3676089c93,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -78.2
+      value: -71.8
       objectReference: {fileID: 0}
     - target: {fileID: 1688011942168403955, guid: e2892c906803d7d419616e3676089c93,
         type: 3}
@@ -18580,6 +18556,11 @@ PrefabInstance:
       propertyPath: _health
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 9132363156155803611, guid: 4b6c258567a74774daade5288b2259de,
+        type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 716399696}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b6c258567a74774daade5288b2259de, type: 3}
 --- !u!1001 &1897212776

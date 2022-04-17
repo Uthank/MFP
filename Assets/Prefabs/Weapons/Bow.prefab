@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 597076111327379242}
   - component: {fileID: 5999561576048053577}
+  - component: {fileID: 1432227571086878492}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -43,6 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a819c8a49956b943b09a23fc91f7b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 2
   _damage: 40
   _model: {fileID: 3368994318000600200, guid: 92af13c462bb8b343b346c820ef4eb4c, type: 3}
+  _particles: {fileID: 4629702887342887241, guid: d6f2b0e907207f947974cb58dfd76c9c,
+    type: 3}
+--- !u!114 &1432227571086878492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368994318000600200}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b879b489d28460040892a141d008411b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particles: {fileID: 0}
+  _shootOffset: {x: 1.5, y: 1, z: 0}

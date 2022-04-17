@@ -4,8 +4,14 @@ ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
+      74: -7615912981626909804
+    second: Wings|BanditRun
+  - first:
       74: -2982930517799858614
     second: Armature.005|BanditAttack
+  - first:
+      74: 7623929475842094373
+    second: Armature.005|BanditDie
   - first:
       74: -828212650655930922
     second: Armature.005|BanditIdle
@@ -16,17 +22,8 @@ ModelImporter:
       74: 5066462472907104425
     second: Armature.005|CitizenAttack
   - first:
-      74: -7615912981626909804
-    second: Wings|BanditRun
-  - first:
-      74: -3100369314251171874
-    second: Idle
-  - first:
-      74: 5522812681064789136
-    second: Run
-  - first:
-      74: 6720303635017113406
-    second: Attack
+      74: -8748008296872073427
+    second: Armature.005|CitizenDie
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -56,7 +53,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Armature.005|BanditIdle
       takeName: Armature.005|BanditIdle
       internalID: 0
       firstFrame: 0
@@ -85,7 +82,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run
+      name: Armature.005|BanditRun
       takeName: Armature.005|BanditRun
       internalID: 0
       firstFrame: 0
@@ -114,8 +111,51 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack
+      name: Armature.005|CitizenAttack
       takeName: Armature.005|CitizenAttack
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.26098734
+        functionName: Attack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.41395348
+        functionName: Attack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.005|CitizenDie
+      takeName: Armature.005|CitizenDie
       internalID: 0
       firstFrame: 0
       lastFrame: 60
@@ -193,7 +233,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: RootBone
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -201,7 +241,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -22,25 +22,11 @@ public class AttackComponent : MonoBehaviour
     public void SetAttackPattern(Weapon weapon)
     {
         _damage = weapon.Damage;
+        gameObject.AddComponent(System.Type.GetType(weapon.GetComponent<AttackPattern>().GetType() + ",Assembly-CSharp"));
+        _attackPattern = GetComponent<AttackPattern>();
 
-        switch (weapon.Type)
-        {
-            case WeaponTypes.None:
-                _attackPattern = gameObject.GetComponent<UnarmedPattern>();
-                break;
-            case WeaponTypes.Bow:
-                _attackPattern = gameObject.GetComponent<BowPattern>();
-                break;
-            case WeaponTypes.Sword:
-                _attackPattern = gameObject.GetComponent<SwordPattern>();
-                break;
-            case WeaponTypes.Spear:
-                _attackPattern = gameObject.GetComponent<SpearPattern>();
-                break;
-            case WeaponTypes.Hammer:
-                _attackPattern = gameObject.GetComponent<HammerPattern>();
-                break;
-        }
+        if (weapon.Particles != null)
+            _attackPattern.Particles = weapon.Particles;
     }
 
     private void Attack()
