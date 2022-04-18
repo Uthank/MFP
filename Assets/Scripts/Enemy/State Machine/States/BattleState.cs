@@ -4,7 +4,6 @@ using UnityEngine;
 public class BattleState : State
 {
     [SerializeField] private float _damage = 40;
-    [SerializeField] private float _attackSpeed = 0.8f;
     [SerializeField] private IEnumerator _hit;
 
     private Animator _animator;
@@ -27,17 +26,11 @@ public class BattleState : State
         _direction = (Target.transform.position - transform.position).normalized;
         _rotation = Mathf.Atan2(_direction.z, _direction.x) * Mathf.Rad2Deg * -1;
         transform.rotation = Quaternion.Euler(0, _rotation, 0);
-
-        if (_hit == null)
-            _hit = Hit();
-        StartCoroutine(_hit);
+        _animator.SetTrigger(_hitAnimation);
     }
 
-    private IEnumerator Hit()
+    private void Hit()
     {
-        _animator.SetTrigger(_hitAnimation);
-        yield return new WaitForSeconds(1 / _attackSpeed);
         Target.TakeDamage(_damage);
-        _hit = null;
     }
 }

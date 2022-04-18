@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] float _maxHealth = 100;
     [SerializeField] float _health = 100;
-    [SerializeField] float _damage = 30;
+    
+    public Vector3 RespawnPoint;
 
-    private PlayerInput _input;
     private Animator _animator;
     private string _dieAnimation = "Die";
     private string _respawnAnimation = "Respawn";
 
-    public Vector3 RespawnPoint;
+    public float MaxHealth => _maxHealth;
+    public bool IsInputEnabled { get; private set; } = true;
 
-    public  UnityEvent Dying;
+    public UnityEvent Dying;
+    public UnityEvent<float> HealthChanged;
 
     private void Awake()
     {
-        RespawnPoint = transform.position;
-        //_input = GetComponent<PlayerInput>();
         _animator = GetComponent<Animator>();
     }
 
@@ -29,28 +31,27 @@ public class Player : MonoBehaviour
         if (damage > _health)
         {
             Dying?.Invoke();
+            Die();
         }
         else
         {
             _health -= damage;
+            HealthChanged?.Invoke(_health);
         }
     }
 
     public void Respawn()
     {
+        _health = _maxHealth;
+        HealthChanged?.Invoke(_health);
         transform.position = RespawnPoint;
-        //_input.Enable();
         _animator.SetTrigger(_respawnAnimation);
-    }
-
-    private void Damage(Enemy enemy)
-    {
-        enemy.TakeDamage(_damage);
+        IsInputEnabled = true;
     }
 
     private void Die()
     {
-        //_input.Disable();
         _animator.SetTrigger(_dieAnimation);
+        IsInputEnabled = false;
     }
 }

@@ -8,12 +8,14 @@ public class AttackComponent : MonoBehaviour
     private AttackPattern _attackPattern;
     private float _damage;
     private PlayerInput _input;
+    private Player _player;
 
     public LayerMask EnemyLayerMask => _enemyLayerMask;
     public float Damage => _damage;
 
     private void Awake()
     {
+        _player = GetComponent<Player>();
         _input = new PlayerInput();
         _input.Player.Attack.performed += ctx => Attack();
         _input.Enable();
@@ -31,6 +33,9 @@ public class AttackComponent : MonoBehaviour
 
     private void Attack()
     {
-        _attackPattern.Attack();
+        if (_player.IsInputEnabled == true)
+        {
+            _attackPattern.Attack();
+        }
     }
 }

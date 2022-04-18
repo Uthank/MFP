@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +10,7 @@ public class MoveComponent : MonoBehaviour
     [SerializeField] private float _speed = 3;
     [SerializeField] private float _jumpForce = 300;
 
+    private Player _player;
     private CapsuleCollider _collider;
     private Rigidbody _rigidbody;
     private Animator _animator;
@@ -35,29 +34,30 @@ public class MoveComponent : MonoBehaviour
         _input = new PlayerInput();
         _input.Player.Jump.performed += ctx => Jump();
         _input.Enable();
+        _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
         _collider = GetComponent<CapsuleCollider>();
     }
 
-    private void Update()
-    {
-        Look();
-    }
-
     private void FixedUpdate()
     {
-        _direction = _input.Player.Move.ReadValue<Vector2>();
-        _velocity = new Vector3(_direction.x * _speed, _rigidbody.velocity.y, _direction.y * _speed);
-        _rigidbody.velocity = _velocity;
+        if (_player.IsInputEnabled == true)
+        {
+            _direction = _input.Player.Move.ReadValue<Vector2>();
+            _velocity = new Vector3(_direction.x * _speed, _rigidbody.velocity.y, _direction.y * _speed);
+            _rigidbody.velocity = _velocity;
 
-        if (_velocity.magnitude > _velocityEpsilon)
-        {
-            _animator.SetBool(_animationRun, true);
-        }
-        else
-        {
-            _animator.SetBool(_animationRun, false);
+            if (_velocity.magnitude > _velocityEpsilon)
+            {
+                _animator.SetBool(_animationRun, true);
+            }
+            else
+            {
+                _animator.SetBool(_animationRun, false);
+            }
+
+            Look();
         }
     }
 

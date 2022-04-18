@@ -13,7 +13,7 @@ public class BowPattern : AttackPattern
         base.Awake();
     }
 
-    private void CreateArrow()
+    private void Shoot()
     {
         GameObject arrow = Instantiate(Particles, transform.position + (transform.rotation * _shootOffset), transform.rotation);
         arrow.GetComponent<Arrow>().Damage = _damage;

@@ -13,16 +13,42 @@ public class Enemy : MonoBehaviour
 
     public event UnityAction<Enemy> Dying;
 
+    private State[] _states;
+    private Transition[] _transitions;
+    private Animator _animator;
+    private string _animationDie = "Die";
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        _states = gameObject.GetComponents<State>();
+        _transitions = gameObject.GetComponents<Transition>();
+    }
+
     public void TakeDamage(float damage)
     {
         if (damage > _health)
         {
             Dying?.Invoke(this);
-            Destroy(gameObject);
+            Die();
         }
         else
         {
             _health -= damage;
         }
+    }
+
+    private void Die()
+    {
+        foreach (var state in _states)
+        {
+            state.enabled = false;
+        }
+        foreach (var transition in _transitions)
+        {
+            transition.enabled = false;
+        }
+
+        _animator.SetTrigger(_animationDie);
     }
 }
