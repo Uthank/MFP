@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Player Target => _target;
     public float Speed { get; private set; } = 3f;
 
-    public event UnityAction<Enemy> Dying;
+    public event UnityAction Dying;
 
     private State[] _states;
     private Transition[] _transitions;
@@ -27,14 +27,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (damage > _health)
-        {
-            Dying?.Invoke(this);
-            Die();
-        }
-        else
+        if (_health > 0)
         {
             _health -= damage;
+
+            if (_health <= 0)
+                Die();
         }
     }
 
@@ -50,5 +48,6 @@ public class Enemy : MonoBehaviour
         }
 
         _animator.SetTrigger(_animationDie);
+        Dying?.Invoke();
     }
 }

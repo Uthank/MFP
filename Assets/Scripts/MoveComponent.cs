@@ -2,9 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
-[RequireComponent (typeof(PlayerInput))]
-
+[RequireComponent (typeof(Player))]
 public class MoveComponent : MonoBehaviour
 {
     [SerializeField] private float _speed = 3;

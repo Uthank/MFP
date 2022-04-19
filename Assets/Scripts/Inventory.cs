@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
-[RequireComponent(typeof(AttackComponent))]
+[RequireComponent(typeof(Player))]
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private GameObject _defaultWeapon;
     [SerializeField] private GameObject _weaponHolder;
 
-    private List<Weapon> _weapons = new List<Weapon>();
+    private List<GameObject> _items = new List<GameObject>();
     private Weapon _equippedWeapon;
     private AttackComponent _attackComponent;
 
@@ -20,9 +19,9 @@ public class Inventory : MonoBehaviour
         EquipWeapon(_defaultWeapon.GetComponent<Weapon>());
     }
 
-    public void Add(Weapon weapon)
+    public void Add(GameObject item)
     {
-        _weapons.Add(weapon);
+        _items.Add(item);
     }
 
     public void Drop(Weapon weapon)

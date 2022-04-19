@@ -1,9 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(MoveComponent))]
+[RequireComponent(typeof(AttackComponent))]
+[RequireComponent(typeof(Inventory))]
 public class Player : MonoBehaviour
 {
     [SerializeField] float _maxHealth = 100;
