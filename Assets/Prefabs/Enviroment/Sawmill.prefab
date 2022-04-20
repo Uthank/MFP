@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4516966819580484823}
   - component: {fileID: 5222977061476041955}
   - component: {fileID: 260619352209580103}
-  - component: {fileID: 2803160633365985278}
   m_Layer: 0
   m_Name: Cube.023
   m_TagString: Untagged
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2803160633365985278
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696996945044766808}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7771613508976059695, guid: b3f9f7c4dc7d30b4eb42fa8014fb6af3, type: 3}
 --- !u!1 &3278906486949373104
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +369,6 @@ GameObject:
   - component: {fileID: 5398399782226053816}
   - component: {fileID: 6621034380307658370}
   - component: {fileID: 8726084978667567001}
-  - component: {fileID: 1021489061391335926}
   m_Layer: 0
   m_Name: Cube.024
   m_TagString: Untagged
@@ -453,20 +437,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1021489061391335926
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7174422737671801022}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -257278029260952120, guid: b3f9f7c4dc7d30b4eb42fa8014fb6af3, type: 3}
 --- !u!1 &8710550653506632589
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +446,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8334411421106266423}
-  - component: {fileID: 9112879568500087912}
   m_Layer: 0
   m_Name: Sawmill
   m_TagString: Untagged
@@ -503,16 +472,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &9112879568500087912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8710550653506632589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.113317, y: 1, z: 4.1047916}
-  m_Center: {x: -0.0155928135, y: 0, z: -0.011331558}

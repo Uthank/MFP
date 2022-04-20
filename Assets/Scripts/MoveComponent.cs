@@ -23,7 +23,7 @@ public class MoveComponent : MonoBehaviour
     {
         get
         {
-            return Physics.Raycast(new Ray(transform.position, Vector3.down), out _hitBuffer, 1.5f);
+            return Physics.Raycast(new Ray(transform.position + transform.rotation * new Vector3(0.5f, 1, 0), Vector3.down), out _hitBuffer, 1.2f);
         }
     }
 

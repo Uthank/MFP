@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Transition : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public abstract class Transition : MonoBehaviour
 
     public State TargetState => _targetState;
 
-    public bool NeedTransit { get; protected set; }
+    public bool NeedTransit { get; set; }
 
     public void Init(Player target)
     {

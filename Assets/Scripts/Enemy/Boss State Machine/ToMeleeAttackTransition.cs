@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class FollowToBattleTransition : Transition
+public class ToMeleeAttackTransition : Transition
 {
-    [SerializeField] private float _detectionDistance = 4f;
+    [SerializeField] private float _detectionDistance = 7f;
 
     private void Update()
     {

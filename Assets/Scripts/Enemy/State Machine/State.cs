@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
-    [SerializeField] private List<Transition> _transitions;
+    [SerializeField] public List<Transition> Transitions;
 
     protected Player Target { get; private set; }
 
@@ -14,7 +14,7 @@ public abstract class State : MonoBehaviour
         {
             Target = target;
             enabled = true;
-            foreach (var transition in _transitions)
+            foreach (var transition in Transitions)
             {
                 transition.enabled = true;
                 transition.Init(Target);
@@ -26,7 +26,7 @@ public abstract class State : MonoBehaviour
     {
         if (enabled == true)
         {
-            foreach (var transition in _transitions)
+            foreach (var transition in Transitions)
                 transition.enabled = false;
 
             enabled = false;
@@ -35,7 +35,7 @@ public abstract class State : MonoBehaviour
 
     public State GetNextState()
     {
-        foreach (var transition in _transitions)
+        foreach (var transition in Transitions)
         {
             if (transition.NeedTransit)
                 return transition.TargetState;

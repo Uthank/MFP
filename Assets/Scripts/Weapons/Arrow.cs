@@ -39,6 +39,11 @@ public class Arrow : MonoBehaviour
             enemy.TakeDamage(Damage);
         }
 
+        if (other.gameObject.TryGetComponent(out RespawnPoint respawnPoint))
+        {
+            return;
+        }
+
         _lifeTimeCurrent -= 10f;
         _rigidbody.isKinematic = true;
         _collider.enabled = false;
