@@ -6,6 +6,8 @@ public class BossRangeAttackState : State
 {
     [SerializeField] private float _damage = 40;
     [SerializeField] private float _attackDuration = 1.5f;
+    [SerializeField] private GameObject _projectile;
+    [SerializeField] private Transform _mouth;
 
     private Animator _animator;
     private string _hitAnimation = "Hit2";
@@ -37,9 +39,20 @@ public class BossRangeAttackState : State
         Transitions[0].NeedTransit = true;
     }
 
-    private void Shoot()
+    private IEnumerator Shoot()
     {
-        Target.TakeDamage(_damage);
-        Debug.Log("Shoot");
+        float chargeSpeed = 1;
+        GameObject projectile = Instantiate(_projectile, _mouth.position, Quaternion.identity, _mouth);
+
+        while (projectile.transform.localScale.x < Vector3.one.x)
+        {
+            projectile.transform.localScale += Vector3.one * chargeSpeed * Time.deltaTime;
+            yield return null;
+        }
+
+        projectile.transform.parent = null;
+        Bullet bulletComponentOfProjectile = projectile.GetComponent<Bullet>();
+        bulletComponentOfProjectile.Target = Target.transform;
+        bulletComponentOfProjectile.Damage = _damage;
     }
 }

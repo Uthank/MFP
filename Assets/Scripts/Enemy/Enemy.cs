@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 
     private State[] _states;
     private Transition[] _transitions;
+    private EnemyStateMachine _enemyStateMachine;
     private Animator _animator;
     private string _animationDie = "Die";
 
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
         _animator = GetComponent<Animator>();
         _states = gameObject.GetComponents<State>();
         _transitions = gameObject.GetComponents<Transition>();
+        _enemyStateMachine = GetComponent<EnemyStateMachine>();
     }
 
     public void TakeDamage(float damage)
@@ -39,16 +41,19 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        _enemyStateMachine.enabled = false;
+
         foreach (var state in _states)
         {
             state.enabled = false;
         }
+
         foreach (var transition in _transitions)
         {
             transition.enabled = false;
         }
 
-        _animator.SetTrigger(_animationDie);
+        _animator.SetBool(_animationDie, true);
         Dying?.Invoke();
     }
 }

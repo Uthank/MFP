@@ -7,6 +7,7 @@ public class MoveComponent : MonoBehaviour
 {
     [SerializeField] private float _speed = 3;
     [SerializeField] private float _jumpForce = 300;
+    [SerializeField] private LayerMask _groundLayer;
 
     private Player _player;
     private CapsuleCollider _collider;
@@ -73,7 +74,7 @@ public class MoveComponent : MonoBehaviour
         mousePosition2D.z = 5f;
         Vector3 pointOnClipPlane = Camera.main.ScreenToWorldPoint(mousePosition2D);
         Vector3 direction = (pointOnClipPlane - Camera.main.transform.position).normalized;
-        Physics.Raycast(new Ray(Camera.main.transform.position, direction), out _hitBuffer, 100f);
+        Physics.Raycast(new Ray(Camera.main.transform.position, direction), out _hitBuffer, 100f, _groundLayer);
         Vector3 targetPoint = _hitBuffer.point;
         targetPoint.y = transform.position.y;
         Vector3 difference = (targetPoint - transform.position).normalized;

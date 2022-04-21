@@ -39,6 +39,5 @@ public class BossMeleeAttackState : State
     private void Hit()
     {
         Target.TakeDamage(_damage);
-        Debug.Log("Shoot");
     }
 }

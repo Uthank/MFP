@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3302cc9408a05e94694edc10375023b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 100
   _health: 100
-  _damage: 30
   RespawnPoint: {x: 0, y: 0, z: 0}
   Dying:
     m_PersistentCalls:
@@ -149,8 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a200f44fe218f04593327d9a12cb20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 6
+  _speed: 7
   _jumpForce: 300
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &2458475529170363464
 MonoBehaviour:
   m_ObjectHideFlags: 0
