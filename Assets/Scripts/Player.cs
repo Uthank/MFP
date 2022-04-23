@@ -22,31 +22,34 @@ public class Player : MonoBehaviour
     public bool IsInputEnabled { get; private set; } = true;
 
     public UnityEvent Dying;
-    public UnityEvent<float> HealthChanged;
+    public UnityAction<float> HealthChanged;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        HealthChanged?.Invoke(_health / _maxHealth);
+    }
+
     public void TakeDamage(float damage)
     {
-        if (damage > _health)
+        _health -= damage;
+        HealthChanged?.Invoke(_health / _maxHealth);
+
+        if (_health < 0)
         {
-            Dying?.Invoke();
+            _health = 0;
             Die();
-        }
-        else
-        {
-            _health -= damage;
-            HealthChanged?.Invoke(_health);
         }
     }
 
     public void Respawn()
     {
         _health = _maxHealth;
-        HealthChanged?.Invoke(_health);
+        HealthChanged?.Invoke(_health / _maxHealth);
         transform.position = RespawnPoint;
         _animator.SetTrigger(_respawnAnimation);
         IsInputEnabled = true;
@@ -56,5 +59,6 @@ public class Player : MonoBehaviour
     {
         _animator.SetTrigger(_dieAnimation);
         IsInputEnabled = false;
+        Dying?.Invoke();
     }
 }
