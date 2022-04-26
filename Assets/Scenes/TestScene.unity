@@ -197,7 +197,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _defaultWeapon
       value: 
-      objectReference: {fileID: 69036716790823919, guid: d30ab86cd7e2e2c4d8fa57bdef69ffa0,
+      objectReference: {fileID: 8751082714445397308, guid: 752d9b18bc1b6f44392a3854fac27de1,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2892c906803d7d419616e3676089c93, type: 3}

@@ -16,7 +16,6 @@ public class Weapon : MonoBehaviour
 
     public virtual void TriggerAttack()
     {
-        Debug.Log(1);
         foreach (var target in _targets)
             ApplyDamage(target.transform.GetComponent<Enemy>());
     }
