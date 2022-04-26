@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 8603960623991627659}
   - component: {fileID: 4006488849255457477}
   - component: {fileID: 6629558042051097510}
+  - component: {fileID: 1264186986}
   m_Layer: 5
   m_Name: Equipped View Template
   m_TagString: Untagged
@@ -410,7 +411,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6840113014876249370}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -463,6 +464,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1264186986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6840113014876249370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c734f1458ba88841a82b9cfeda09a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: {fileID: 7812047532500921912}
+  _damage: {fileID: 162236491240184911}
+  _icon: {fileID: 5704086462526038121}
+  _unequip: {fileID: 0}
 --- !u!1 &7703419731863811516
 GameObject:
   m_ObjectHideFlags: 0

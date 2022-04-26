@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2825391436840340691
+--- !u!1 &3690544044414894538
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2982766701838755799}
-  - component: {fileID: 4239468601339682172}
-  - component: {fileID: 5103217779411736262}
+  - component: {fileID: 316672192040783884}
+  - component: {fileID: 1480528749465914221}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -18,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2982766701838755799
+--- !u!4 &316672192040783884
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2825391436840340691}
+  m_GameObject: {fileID: 3690544044414894538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,33 +31,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4239468601339682172
+--- !u!114 &1480528749465914221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2825391436840340691}
+  m_GameObject: {fileID: 3690544044414894538}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abd365e90f77733408944cec89a57899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 20
-  _model: {fileID: 2825391436840340691, guid: 8051d2baeba776e4c91fa7d646949f60, type: 3}
-  _particles: {fileID: 0}
---- !u!114 &5103217779411736262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2825391436840340691}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c460105cc49e404aa2163e408a0490d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Particles: {fileID: 0}
+  _player: {fileID: 0}
+  _characterController: {fileID: 9100000, guid: be9424f17be66d24ba42a5854e7619b8,
+    type: 2}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  _data: {fileID: 11400000, guid: b805ba442b94d8b43a838e9f087a2c06, type: 2}
   _hitboxCenter: {x: 1.5, y: 1, z: 0}
   _hitboxHalfExtents: {x: 1.5, y: 1, z: 2}
