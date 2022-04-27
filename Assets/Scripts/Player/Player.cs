@@ -11,10 +11,10 @@ using UnityEngine.Events;
 public class Player : Damageable
 {
     [SerializeField] private WaitForSeconds _respawnTimer = new WaitForSeconds(3f);
-
-    [HideInInspector] public Vector3 RespawnPoint;
     
     private string _respawnAnimation = "Respawn";
+
+    [HideInInspector] public Vector3 RespawnPoint;
 
     public UnityAction Respawned;
 

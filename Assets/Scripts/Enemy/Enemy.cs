@@ -6,12 +6,12 @@ public class Enemy : Damageable
     [SerializeField] private float _speed = 3;
     [SerializeField] private State _defaultState;
 
-    public Player Target => _target;
-    public float Speed => _speed;
-
     private State[] _states;
     private Transition[] _transitions;
     private EnemyStateMachine _enemyStateMachine;
+
+    public Player Target => _target;
+    public float Speed => _speed;
 
     protected override void Awake()
     {

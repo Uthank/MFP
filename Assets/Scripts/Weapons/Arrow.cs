@@ -7,12 +7,11 @@ public class Arrow : MonoBehaviour
     [SerializeField] private float _speed = 15f;
     [SerializeField] private float _lifeTime = 2f;
 
-    public float Damage;
-    
     private float _lifeTimeCurrent;
     private Rigidbody _rigidbody;
     private Collider _collider;
     private Vector3 _velocity;
+    public float Damage;
 
     private void Start()
     {
