@@ -14,7 +14,7 @@ public class Path : MonoBehaviour
         foreach (var point in GetComponentsInChildren<PathPoint>())
         {
             _positions.Add(point.gameObject.transform.position);
-            Destroy(point.gameObject);
+            point.transform.parent = null;
         }
 
         if (_positions.Count > 1)
