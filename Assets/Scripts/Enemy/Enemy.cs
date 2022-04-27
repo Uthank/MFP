@@ -5,7 +5,6 @@ public class Enemy : Damageable
     [SerializeField] private Player _target;
     [SerializeField] private float _speed = 3;
     [SerializeField] private State _defaultState;
-    [SerializeField] private Transition[] _defaultTransitions;
 
     public Player Target => _target;
     public float Speed => _speed;
@@ -53,24 +52,14 @@ public class Enemy : Damageable
 
     private void DisableStates()
     {
-        foreach (var transition in _transitions)
-        {
-            transition.enabled = false;
-        }
-
         foreach (var state in _states)
         {
-            state.enabled = false;
+            state.Exit();
         }
     }
 
     private void ResetState()
     {
-        _defaultState.enabled = true;
-
-        foreach (var transition in _defaultTransitions)
-        {
-            transition.enabled = true;
-        }
+        _enemyStateMachine.Reset(_defaultState);
     }
 }

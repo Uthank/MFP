@@ -28,7 +28,7 @@ public class EnemyStateMachine : MonoBehaviour
             Transit(nextState);
     }
 
-    private void Reset(State startState)
+    public void Reset(State startState)
     {
         _currentState = startState;
 
