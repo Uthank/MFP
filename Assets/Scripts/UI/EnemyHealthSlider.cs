@@ -8,7 +8,7 @@ public class EnemyHealthSlider : MonoBehaviour
     [SerializeField] private Enemy _enemy;
 
     private Coroutine smoothChangeValue;
-    private float speed = 1f;
+    private float speed = 5f;
     private Slider _slider;
 
     private void Awake()

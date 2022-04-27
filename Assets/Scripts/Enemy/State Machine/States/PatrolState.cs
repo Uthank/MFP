@@ -12,7 +12,7 @@ public class PatrolState : State
     private string _runAnimation = "Run";
     private Vector3 _targetPosition;
     private float _speed;
-    private float _minimalDistance = 0.1f;
+    private float _minimalDistance = 0.3f;
     private Vector3 _direction;
     private IEnumerator _run;
     private float _rotation;
@@ -41,6 +41,16 @@ public class PatrolState : State
             Patrol();
     }
 
+    private void Patrol()
+    {
+        if ((_targetPosition - transform.position).magnitude < _minimalDistance && _run == null)
+        {
+            _targetPosition = _path.GetNextPosition();
+            _run = Run();
+            StartCoroutine(_run);
+        }
+    }
+
     private IEnumerator Run()
     {
         _animator.SetBool(_runAnimation, true);
@@ -56,15 +66,5 @@ public class PatrolState : State
 
         _animator.SetBool(_runAnimation, false);
         _run = null;
-    }
-
-    private void Patrol()
-    {
-        if ((_targetPosition - transform.position).magnitude < _minimalDistance && _run == null)
-        {
-            _targetPosition = _path.GetNextPosition();
-            _run = Run();
-            StartCoroutine(_run);
-        }
     }
 }

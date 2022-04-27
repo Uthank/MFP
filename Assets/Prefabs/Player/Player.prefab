@@ -166,9 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9901639f3a776f84e9baa2a82e89df37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultWeapon: {fileID: 7511024516630309071, guid: 752d9b18bc1b6f44392a3854fac27de1,
+  _defaultWeapon: {fileID: 5191671387941706193, guid: 752d9b18bc1b6f44392a3854fac27de1,
     type: 3}
   _weaponHolder: {fileID: 2888749026678222141}
+  _inventoryView: {fileID: 0}
 --- !u!114 &5945242965653003571
 MonoBehaviour:
   m_ObjectHideFlags: 0

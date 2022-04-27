@@ -6,13 +6,9 @@ public class DeadlyZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<Player>(out Player player) == true)
+        if (other.gameObject.TryGetComponent<Damageable>(out Damageable damageable) == true)
         {
-            player.TakeDamage(1000);
-        }
-        else if (other.gameObject.TryGetComponent<Enemy>(out Enemy enemy) == true)
-        {
-            enemy.TakeDamage(1000);
+            damageable.TakeDamage(1000);
         }
     }
 }

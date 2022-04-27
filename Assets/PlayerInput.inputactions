@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Inventory",
+                    "type": "Button",
+                    "id": "0344ca2c-ef7b-40cb-a0bb-aa306be912f7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -133,12 +142,12 @@
                 },
                 {
                     "name": "",
-                    "id": "016cef2f-f256-433d-a3ed-df45b429d329",
-                    "path": "<Keyboard>/z",
+                    "id": "e647f159-6ff2-4bf0-ad63-2b87c95d859c",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Attack",
+                    "groups": "MouseKeyboard",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

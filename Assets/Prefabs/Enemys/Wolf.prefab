@@ -34,13 +34,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 292351240, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
+      propertyPath: _speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 292351242, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: _damage
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 361926280, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 419477946, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: m_Center.y
@@ -56,6 +60,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: aceb18e477c592d4fbba6900d445fa8f, type: 2}
+    - target: {fileID: 4063274513621634851, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490519755644456795, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: _speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4490519755644456795, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: _health

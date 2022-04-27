@@ -1,60 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Damageable
 {
-    [SerializeField] private float _maxHealth = 100;
     [SerializeField] private Player _target;
+    [SerializeField] private float _speed = 3;
+    [SerializeField] private State _defaultState;
+    [SerializeField] private Transition[] _defaultTransitions;
 
     public Player Target => _target;
-    public float Speed { get; private set; } = 3f;
-
-    private bool isAlive => _health > 0;
-
-    public event UnityAction Dying;
-    public UnityAction<float> HealthChanged;
+    public float Speed => _speed;
 
     private State[] _states;
-    private float _health;
     private Transition[] _transitions;
     private EnemyStateMachine _enemyStateMachine;
-    private Animator _animator;
-    private Collider _collider;
-    private string _animationDie = "Die";
 
-    private void Awake()
+    protected override void Awake()
     {
-        _animator = GetComponent<Animator>();
+        base.Awake();
         _states = gameObject.GetComponents<State>();
         _transitions = gameObject.GetComponents<Transition>();
         _enemyStateMachine = GetComponent<EnemyStateMachine>();
-        _collider = GetComponent<Collider>();
-        _health = _maxHealth;
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        HealthChanged?.Invoke(_health / _maxHealth);
+        Target.Respawned += ResetState;
+        Target.Dying += DisableStates;
     }
 
-    public void TakeDamage(float damage)
+    private void OnDisable()
     {
-        if (isAlive == true)
-        {
-            _health -= damage;
-            HealthChanged?.Invoke(_health / _maxHealth);
-
-            if (_health <= 0)
-            {
-                _health = 0;
-                Die();
-            }
-        }
+        Target.Respawned -= ResetState;
+        Target.Dying -= DisableStates;
     }
 
-    private void Die()
+    protected override void Die()
     {
         _enemyStateMachine.enabled = false;
 
@@ -68,7 +48,29 @@ public class Enemy : MonoBehaviour
             transition.enabled = false;
         }
 
-        _animator.SetBool(_animationDie, true);
-        Dying?.Invoke();
+        base.Die();
+    }
+
+    private void DisableStates()
+    {
+        foreach (var transition in _transitions)
+        {
+            transition.enabled = false;
+        }
+
+        foreach (var state in _states)
+        {
+            state.enabled = false;
+        }
+    }
+
+    private void ResetState()
+    {
+        _defaultState.enabled = true;
+
+        foreach (var transition in _defaultTransitions)
+        {
+            transition.enabled = true;
+        }
     }
 }

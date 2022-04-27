@@ -405,6 +405,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _target: {fileID: 0}
+  _speed: 3
+  _defaultState: {fileID: 292351237}
+  _defaultTransitions:
+  - {fileID: 292351241}
 --- !u!114 &292351238
 MonoBehaviour:
   m_ObjectHideFlags: 0

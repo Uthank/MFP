@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wood Bow Data
   m_EditorClassIdentifier: 
   _damage: 40
-  _model: {fileID: 0}
+  _model: {fileID: 3368994318000600200, guid: 92af13c462bb8b343b346c820ef4eb4c, type: 3}
   _particles: {fileID: 0}
   _ammo: {fileID: 4629702887342887241, guid: d6f2b0e907207f947974cb58dfd76c9c, type: 3}
+  _icon: {fileID: 21300000, guid: 7751b081b6cd5344ebf531dae6242d44, type: 3}

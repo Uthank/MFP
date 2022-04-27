@@ -17,3 +17,4 @@ MonoBehaviour:
   _particles: {fileID: 2107709757824418305, guid: 769870a81c7b06047b53accc0e5b97d1,
     type: 3}
   _ammo: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 8c04c3b6e6b225146ab6ceb90abe623e, type: 3}

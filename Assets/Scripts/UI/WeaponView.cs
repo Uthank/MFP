@@ -10,10 +10,31 @@ public class WeaponView : MonoBehaviour
     [SerializeField] private Image _icon;
     [SerializeField] private Button _equip;
 
-    public void Set(Weapon weapon)
+    private Weapon _weapon;
+    private InventoryView _inventoryView;
+
+    private void OnEnable()
     {
+        _equip.onClick.AddListener(OnButtonClick);
+    }
+
+    private void OnDisable()
+    {
+        _equip.onClick.RemoveListener(OnButtonClick);
+    }
+
+    public void Initialize(Weapon weapon, InventoryView inventoryView)
+    {
+        _inventoryView = inventoryView;
+        _weapon = weapon;
         _name.text = weapon.name;
         _damage.text = weapon.Data.Damage.ToString();
-        //_icon = weapon.Icon;
+        _icon.sprite = weapon.Data.Icon;
+    }
+
+    private void OnButtonClick()
+    {
+        _inventoryView.Inventory.EquipWeapon(_weapon);
+        Destroy(gameObject);
     }
 }

@@ -4,34 +4,53 @@ using UnityEngine;
 
 public class InventoryView : MonoBehaviour
 {
-    [SerializeField] Inventory _inventory;
-    [SerializeField] EquippedWeaponView _equippedWeaponView;
-    [SerializeField] GameObject _contentView;
-    [SerializeField] GameObject _weaponViewTemplate;
+    [SerializeField] private Inventory _inventory;
+    [SerializeField] private EquippedWeaponView _equippedWeaponView;
+    [SerializeField] private GameObject _contentView;
+    [SerializeField] private GameObject _weaponViewTemplate;
 
-    private void Awake()
-    {
-        _equippedWeaponView.Set(_inventory.EquippedWeapon);
-
-        //foreach (var weapon in _inventory.GetWeaponsList())
-        //{
-        //    var weaponView = Instantiate(new WeaponView(), _contentView.transform);
-        //    weaponView.Set(weapon);
-        //}
-    }
+    public Inventory Inventory => _inventory;
 
     private void OnEnable()
     {
         _inventory.WeaponAdded += AddWeaponView;
+        _inventory.WeaponEquipped += SetEquippedWeaponView;
+        Initialize();
     }
 
     private void OnDisable()
     {
         _inventory.WeaponAdded -= AddWeaponView;
+        _inventory.WeaponEquipped -= SetEquippedWeaponView;
+        Clear();
     }
 
     private void AddWeaponView(Weapon weapon)
     {
-        Instantiate(_weaponViewTemplate, _contentView.transform).GetComponent<WeaponView>().Set(weapon);
+       var weaponView = Instantiate(_weaponViewTemplate, _contentView.transform).GetComponent<WeaponView>();
+        weaponView.Initialize(weapon, this);
+    }
+
+    private void SetEquippedWeaponView(Weapon weapon)
+    {
+        _equippedWeaponView.Set(weapon);
+    }
+
+    private void Initialize()
+    {
+        _equippedWeaponView.Set(Inventory.EquippedWeapon);
+
+        foreach (var weapon in Inventory.GetWeaponsList())
+        {
+            AddWeaponView(weapon);
+        }
+    }
+
+    private void Clear()
+    {
+        foreach (var weaponView in _contentView.GetComponentsInChildren<WeaponView>())
+        {
+            Destroy(weaponView.gameObject);
+        }
     }
 }

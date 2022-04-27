@@ -5,13 +5,16 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Player))]
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private GameObject _defaultWeapon;
+    [SerializeField] private Weapon _defaultWeapon;
     [SerializeField] private GameObject _weaponHolder;
+    [SerializeField] private GameObject _inventoryView;
 
     private Player _player;
     private AttackComponent _attackComponent;
     private List<Weapon> _weapons = new List<Weapon>();
     private Weapon _equippedWeapon;
+    private GameObject _weaponHolderModel;
+    private PlayerInput _input;
 
     public Weapon EquippedWeapon => _equippedWeapon;
 
@@ -22,7 +25,14 @@ public class Inventory : MonoBehaviour
     {
         _player = GetComponent<Player>();
         _attackComponent = GetComponent<AttackComponent>();
-        EquipWeapon(_defaultWeapon.GetComponent<Weapon>());
+        _input = new PlayerInput();
+        _input.Player.Inventory.performed += ctx => View();
+        _input.Enable();
+    }
+
+    private void Start()
+    {
+        EquipWeapon(_defaultWeapon);
     }
 
     public List<Weapon> GetWeaponsList()
@@ -43,14 +53,43 @@ public class Inventory : MonoBehaviour
 
     public void EquipWeapon(Weapon weapon)
     {
+        if (_equippedWeapon != _defaultWeapon && _equippedWeapon != null)
+            Add(_equippedWeapon);
+
         _equippedWeapon = weapon;
         _player.GetComponent<Animator>().runtimeAnimatorController = weapon.CharacterController;
         _attackComponent.SetWeapon(weapon);
 
-        if (_weaponHolder.transform.childCount > 0)
-            Destroy(_weaponHolder.transform.GetChild(0));
+        if (_weaponHolderModel != null)
+            Destroy(_weaponHolderModel);
 
         if (weapon.Data.Model != null)
-            Instantiate(weapon.Data.Model, _weaponHolder.transform);
+            _weaponHolderModel = Instantiate(weapon.Data.Model, _weaponHolder.transform);
+
+        Remove(weapon);
+
+        WeaponEquipped?.Invoke(_equippedWeapon);
+    }
+
+    public void UnequipWeapon()
+    {
+        EquipWeapon(_defaultWeapon);
+    }
+
+    private void Remove(Weapon weapon)
+    {
+        _weapons.Remove(weapon);
+    }
+
+    private void View()
+    {
+        if (_inventoryView.activeSelf == false)
+        {
+            _inventoryView.SetActive(true);
+        }
+        else
+        {
+            _inventoryView.SetActive(false);
+        }
     }
 }

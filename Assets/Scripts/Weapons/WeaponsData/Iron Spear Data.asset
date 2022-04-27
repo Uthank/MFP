@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af211df5ee8916489c2c16a2e5b4e17, type: 3}
   m_Name: Iron Spear Data
   m_EditorClassIdentifier: 
-  _damage: 70
+  _damage: 40
   _model: {fileID: 4910362138932323014, guid: cb37d15c8dcd9864581729d85479db3f, type: 3}
   _particles: {fileID: 2107709757824418305, guid: 61788e947fda5bc43a889f82525cefce,
     type: 3}
   _ammo: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 0a4dd7e5478b31141af1beacfbb16cd6, type: 3}

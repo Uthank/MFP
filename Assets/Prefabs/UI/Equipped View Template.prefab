@@ -476,10 +476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c734f1458ba88841a82b9cfeda09a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventoryView: {fileID: 0}
   _name: {fileID: 7812047532500921912}
   _damage: {fileID: 162236491240184911}
   _icon: {fileID: 5704086462526038121}
-  _unequip: {fileID: 0}
+  _unequip: {fileID: 7386987690287304611}
+  _defaultWeapon: {fileID: 8751082714445397308, guid: 752d9b18bc1b6f44392a3854fac27de1,
+    type: 3}
 --- !u!1 &7703419731863811516
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18316127, g: 0.31672183, b: 0.7924528, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

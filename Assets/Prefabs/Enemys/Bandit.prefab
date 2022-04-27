@@ -175,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361926280, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 419477946, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
       propertyPath: m_Size.x
@@ -207,6 +207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063274513621634851, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4490519755644456795, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}

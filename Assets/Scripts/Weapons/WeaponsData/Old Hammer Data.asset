@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Old Hammer Data
   m_EditorClassIdentifier: 
   _damage: 120
-  _model: {fileID: 0}
+  _model: {fileID: 110856075971997399, guid: dffba642b29419b40a790699d42073b5, type: 3}
   _particles: {fileID: 8893269369547795031, guid: 20ec1984d571c12489f71e4bb50128b7,
     type: 3}
   _ammo: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 659625bb20c9e0a49a1d1c45cb3bc0b9, type: 3}

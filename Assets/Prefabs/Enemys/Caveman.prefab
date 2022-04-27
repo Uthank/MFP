@@ -95,10 +95,6 @@ PrefabInstance:
       propertyPath: _damage
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 361926280, guid: c8afd613da8e8bd4e90a46e22ce59090, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3925313936302672448, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: m_Avatar
@@ -109,6 +105,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 57852c224e9691549a36c9dc97de60fd, type: 2}
+    - target: {fileID: 4063274513621634851, guid: c8afd613da8e8bd4e90a46e22ce59090,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4490519755644456795, guid: c8afd613da8e8bd4e90a46e22ce59090,
         type: 3}
       propertyPath: _health

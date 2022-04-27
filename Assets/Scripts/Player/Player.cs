@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(CapsuleCollider))]
@@ -7,58 +8,45 @@ using UnityEngine.Events;
 [RequireComponent(typeof(MoveComponent))]
 [RequireComponent(typeof(AttackComponent))]
 [RequireComponent(typeof(Inventory))]
-public class Player : MonoBehaviour
+public class Player : Damageable
 {
-    [SerializeField] float _maxHealth = 100;
-    [SerializeField] float _health = 100;
-    
-    public Vector3 RespawnPoint;
+    [SerializeField] private WaitForSeconds _respawnTimer = new WaitForSeconds(3f);
 
-    private Animator _animator;
-    private string _dieAnimation = "Die";
+    [HideInInspector] public Vector3 RespawnPoint;
+    
     private string _respawnAnimation = "Respawn";
 
-    public float MaxHealth => _maxHealth;
+    public UnityAction Respawned;
+
     public bool IsInputEnabled { get; private set; } = true;
 
-    public UnityEvent Dying;
-    public UnityAction<float> HealthChanged;
-
-    private void Awake()
+    protected override void Awake()
     {
-        _animator = GetComponent<Animator>();
-    }
-
-    private void Start()
-    {
-        HealthChanged?.Invoke(_health / _maxHealth);
-    }
-
-    public void TakeDamage(float damage)
-    {
-        _health -= damage;
-        HealthChanged?.Invoke(_health / _maxHealth);
-
-        if (_health < 0)
-        {
-            _health = 0;
-            Die();
-        }
+        RespawnPoint = transform.position;
+        base.Awake();
     }
 
     public void Respawn()
     {
+        transform.position = RespawnPoint;
         _health = _maxHealth;
         HealthChanged?.Invoke(_health / _maxHealth);
-        transform.position = RespawnPoint;
+        _animator.SetBool(_dieAnimation, false);
         _animator.SetTrigger(_respawnAnimation);
         IsInputEnabled = true;
+        Respawned?.Invoke();
     }
 
-    private void Die()
+    protected override void Die()
     {
-        _animator.SetTrigger(_dieAnimation);
         IsInputEnabled = false;
-        Dying?.Invoke();
+        base.Die();
+        StartCoroutine(TimedRespawn());
+    }
+
+    private IEnumerator TimedRespawn()
+    {
+        yield return _respawnTimer;
+        Respawn();
     }
 }
