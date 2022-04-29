@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Path))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 public class Enemy : Damageable
 {
     [SerializeField] private Player _target;

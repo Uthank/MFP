@@ -5,8 +5,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(MoveComponent))]
-[RequireComponent(typeof(AttackComponent))]
+[RequireComponent(typeof(Mover))]
+[RequireComponent(typeof(Attacker))]
 [RequireComponent(typeof(Inventory))]
 public class Player : Damageable
 {

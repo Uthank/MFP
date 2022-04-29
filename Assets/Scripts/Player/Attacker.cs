@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Player))]
-public class AttackComponent : MonoBehaviour
+public class Attacker : MonoBehaviour
 {
     [SerializeField] private LayerMask _enemyLayerMask;
 

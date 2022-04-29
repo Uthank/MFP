@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject _inventoryView;
 
     private Player _player;
-    private AttackComponent _attackComponent;
+    private Attacker _attacker;
     private List<Weapon> _weapons = new List<Weapon>();
     private Weapon _equippedWeapon;
     private GameObject _weaponHolderModel;
@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         _player = GetComponent<Player>();
-        _attackComponent = GetComponent<AttackComponent>();
+        _attacker = GetComponent<Attacker>();
         _input = new PlayerInput();
         _input.Player.Inventory.performed += ctx => View();
         _input.Enable();
@@ -58,7 +58,7 @@ public class Inventory : MonoBehaviour
 
         _equippedWeapon = weapon;
         _player.GetComponent<Animator>().runtimeAnimatorController = weapon.CharacterController;
-        _attackComponent.SetWeapon(weapon);
+        _attacker.SetWeapon(weapon);
 
         if (_weaponHolderModel != null)
             Destroy(_weaponHolderModel);

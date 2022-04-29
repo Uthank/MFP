@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Enemy))]
 public class DropOnDeath : MonoBehaviour
 {
-    [SerializeField] private GameObject _dropWrapper;
+    [SerializeField] private DropWrapper _dropWrapper;
     [SerializeField] private Weapon _drop;
 
     private Enemy _enemy;

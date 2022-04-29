@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Path))]
+[RequireComponent(typeof(Enemy))]
 public class PatrolState : State
 {
     private Path _path;

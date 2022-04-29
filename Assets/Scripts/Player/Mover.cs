@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent (typeof(Player))]
-public class MoveComponent : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [SerializeField] private float _speed = 3;
     [SerializeField] private float _jumpForce = 300;

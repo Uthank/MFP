@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class EquippedWeaponView : MonoBehaviour
 {
-    [SerializeField] InventoryView _inventoryView;
+    [SerializeField] private InventoryView _inventoryView;
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _damage;
     [SerializeField] private Image _icon;

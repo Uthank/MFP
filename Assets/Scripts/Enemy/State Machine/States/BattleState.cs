@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class BattleState : State
 {
     [SerializeField] private float _damage = 40;

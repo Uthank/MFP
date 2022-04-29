@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class BossMeleeAttackState : State
 {
     [SerializeField] private float _damage = 40;
