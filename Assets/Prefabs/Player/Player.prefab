@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1688011942168403959}
   - component: {fileID: 1877137679}
   - component: {fileID: 1688011942168403956}
-  - component: {fileID: 1688011942168403954}
   - component: {fileID: 2458475529170363464}
   - component: {fileID: 5945242965653003571}
+  - component: {fileID: 6213964949412795673}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -132,28 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _health: 100
   RespawnPoint: {x: 0, y: 0, z: 0}
-  Dying:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1688011942168403954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688011942168403957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a200f44fe218f04593327d9a12cb20a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 7
-  _jumpForce: 300
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!114 &2458475529170363464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +164,23 @@ MonoBehaviour:
   _enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &6213964949412795673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688011942168403957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa813049f4adbc546a60be164dc8e42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 6
+  _jumpForce: 300
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &1758883343009800060
 PrefabInstance:
   m_ObjectHideFlags: 0

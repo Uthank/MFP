@@ -10,7 +10,6 @@ public class Mover : MonoBehaviour
     [SerializeField] private LayerMask _groundLayer;
 
     private Player _player;
-    private CapsuleCollider _collider;
     private Rigidbody _rigidbody;
     private Animator _animator;
     private String _animationRun = "Run";
@@ -36,7 +35,6 @@ public class Mover : MonoBehaviour
         _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
-        _collider = GetComponent<CapsuleCollider>();
     }
 
     private void FixedUpdate()
