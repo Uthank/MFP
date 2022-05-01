@@ -2,11 +2,13 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Animator))]
 public class BossRangeAttackState : State
 {
     [SerializeField] private float _damage = 40;
     [SerializeField] private float _attackDuration = 1.5f;
-    [SerializeField] private GameObject _projectile;
+    [SerializeField] private Bullet _projectile;
     [SerializeField] private Transform _mouth;
 
     private Animator _animator;
@@ -42,7 +44,7 @@ public class BossRangeAttackState : State
     private IEnumerator Shoot()
     {
         float chargeSpeed = 1;
-        GameObject projectile = Instantiate(_projectile, _mouth.position, Quaternion.identity, _mouth);
+        Bullet projectile = Instantiate(_projectile, _mouth.position, Quaternion.identity, _mouth);
 
         while (projectile.transform.localScale.x < Vector3.one.x)
         {
@@ -51,8 +53,7 @@ public class BossRangeAttackState : State
         }
 
         projectile.transform.parent = null;
-        Bullet bulletComponentOfProjectile = projectile.GetComponent<Bullet>();
-        bulletComponentOfProjectile.Target = Target.transform;
-        bulletComponentOfProjectile.Damage = _damage;
+        projectile.Target = Target.transform;
+        projectile.Damage = _damage;
     }
 }

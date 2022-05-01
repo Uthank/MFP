@@ -1,1 +1,3 @@
-﻿public class ToMeleeAttackRangeTransition : Transition {}
+﻿public class ToMeleeAttackRangeTransition : Transition
+{
+}

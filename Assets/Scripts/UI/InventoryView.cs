@@ -7,7 +7,7 @@ public class InventoryView : MonoBehaviour
     [SerializeField] private Inventory _inventory;
     [SerializeField] private EquippedWeaponView _equippedWeaponView;
     [SerializeField] private GameObject _contentView;
-    [SerializeField] private GameObject _weaponViewTemplate;
+    [SerializeField] private WeaponView _weaponViewTemplate;
 
     public Inventory Inventory => _inventory;
 
@@ -27,7 +27,7 @@ public class InventoryView : MonoBehaviour
 
     private void AddWeaponView(Weapon weapon)
     {
-       var weaponView = Instantiate(_weaponViewTemplate, _contentView.transform).GetComponent<WeaponView>();
+        WeaponView weaponView = Instantiate(_weaponViewTemplate, _contentView.transform);
         weaponView.Initialize(weapon, this);
     }
 

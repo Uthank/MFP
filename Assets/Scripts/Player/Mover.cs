@@ -2,7 +2,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent (typeof(Player))]
+[RequireComponent(typeof(Player))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class Mover : MonoBehaviour
 {
     [SerializeField] private float _speed = 3;
@@ -12,12 +14,12 @@ public class Mover : MonoBehaviour
     private Player _player;
     private Rigidbody _rigidbody;
     private Animator _animator;
-    private String _animationRun = "Run";
+    private string _animationRun = "Run";
     private PlayerInput _input;
     private Vector2 _direction;
     private Vector3 _velocity;
     private float _velocityEpsilon = 0.01f;
-    private RaycastHit _hitBuffer = new RaycastHit();
+    private RaycastHit _hitBuffer;
 
     private bool IsGrounded
     {

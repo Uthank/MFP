@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyStateMachine))]
 public class BossBattleRouteState : State
 {
     private int _attackCount;

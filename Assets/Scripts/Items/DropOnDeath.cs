@@ -25,7 +25,7 @@ public class DropOnDeath : MonoBehaviour
 
     private void DropItem()
     {
-        var dropWrapper = Instantiate(_dropWrapper, transform.position, Quaternion.identity);
-        dropWrapper.GetComponent<DropWrapper>()._drop = _drop;
+        DropWrapper dropWrapper = Instantiate(_dropWrapper, transform.position, Quaternion.identity);
+        dropWrapper._drop = _drop;
     }
 }

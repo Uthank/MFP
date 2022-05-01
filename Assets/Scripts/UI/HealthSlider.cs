@@ -32,7 +32,6 @@ public class HealthSlider : MonoBehaviour
             StopCoroutine(smoothChangeValue);
 
         smoothChangeValue = StartCoroutine(SmoothChangeValue(targetValue));
-
     }
 
     private IEnumerator SmoothChangeValue(float targetValue)
@@ -45,4 +44,4 @@ public class HealthSlider : MonoBehaviour
 
         _slider.value = targetValue;
     }
-}   
+}

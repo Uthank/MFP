@@ -1,1 +1,3 @@
-﻿public class ToRangeAttackTransition : Transition {}
+﻿public class ToRangeAttackTransition : Transition
+{
+}

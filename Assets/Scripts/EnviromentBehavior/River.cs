@@ -6,12 +6,12 @@ public class River : MonoBehaviour
 
     private Renderer[] _renderers;
 
-    void Start()
+    private void Start()
     {
         _renderers = GetComponentsInChildren<Renderer>();
     }
 
-    void Update()
+    private void Update()
     {
         float offset = Time.time * _scrollSpeed;
 

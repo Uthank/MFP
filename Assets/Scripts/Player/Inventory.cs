@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Player))]
+[RequireComponent(typeof(Attacker))]
+[RequireComponent(typeof(PlayerInput))]
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private Weapon _defaultWeapon;
@@ -12,14 +14,13 @@ public class Inventory : MonoBehaviour
     private Player _player;
     private Attacker _attacker;
     private List<Weapon> _weapons = new List<Weapon>();
-    private Weapon _equippedWeapon;
     private GameObject _weaponHolderModel;
     private PlayerInput _input;
 
-    public Weapon EquippedWeapon => _equippedWeapon;
+    public event UnityAction<Weapon> WeaponAdded;
+    public event UnityAction<Weapon> WeaponEquipped;
 
-    public UnityAction<Weapon> WeaponAdded;
-    public UnityAction<Weapon> WeaponEquipped;
+    public Weapon EquippedWeapon { get; private set; }
 
     private void Awake()
     {
@@ -53,10 +54,10 @@ public class Inventory : MonoBehaviour
 
     public void EquipWeapon(Weapon weapon)
     {
-        if (_equippedWeapon != _defaultWeapon && _equippedWeapon != null)
-            Add(_equippedWeapon);
+        if (EquippedWeapon != _defaultWeapon && EquippedWeapon != null)
+            Add(EquippedWeapon);
 
-        _equippedWeapon = weapon;
+        EquippedWeapon = weapon;
         _player.GetComponent<Animator>().runtimeAnimatorController = weapon.CharacterController;
         _attacker.SetWeapon(weapon);
 
@@ -68,7 +69,7 @@ public class Inventory : MonoBehaviour
 
         Remove(weapon);
 
-        WeaponEquipped?.Invoke(_equippedWeapon);
+        WeaponEquipped?.Invoke(EquippedWeapon);
     }
 
     public void UnequipWeapon()

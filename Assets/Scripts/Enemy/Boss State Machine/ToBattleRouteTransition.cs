@@ -1,1 +1,3 @@
-﻿public class ToBattleRouteTransition : Transition {}
+﻿public class ToBattleRouteTransition : Transition
+{
+}

@@ -2,6 +2,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(Path))]
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody))]
 public class PatrolState : State
 {
     private Path _path;

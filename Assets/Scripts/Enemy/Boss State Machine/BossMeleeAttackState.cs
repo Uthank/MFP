@@ -2,6 +2,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Animator))]
 public class BossMeleeAttackState : State
 {
     [SerializeField] private float _damage = 40;

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class FollowToCloseRangeState : State
 {
     [SerializeField] private float _speed = 3f;

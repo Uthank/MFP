@@ -39,7 +39,6 @@ public class EnemyHealthSlider : MonoBehaviour
             StopCoroutine(smoothChangeValue);
 
         smoothChangeValue = StartCoroutine(SmoothChangeValue(targetValue));
-
     }
 
     private IEnumerator SmoothChangeValue(float targetValue)

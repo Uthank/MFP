@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
+[RequireComponent(typeof(EnemyStateMachine))]
+[RequireComponent(typeof(Animator))]
 public class BattleState : State
 {
     [SerializeField] private float _damage = 40;

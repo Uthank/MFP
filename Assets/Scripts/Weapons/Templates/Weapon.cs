@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected Player _player;
     [SerializeField] protected RuntimeAnimatorController _characterController;
     [SerializeField] protected LayerMask _layerMask;
-    [SerializeField] protected  WeaponData _data;
+    [SerializeField] protected WeaponData _data;
 
     protected Collider[] _targets;
     protected IEnumerator _attackCoroutine;
@@ -14,13 +14,13 @@ public class Weapon : MonoBehaviour
     public WeaponData Data => _data;
     public RuntimeAnimatorController CharacterController => _characterController;
 
-    public virtual void TriggerAttack()
+    public virtual void Attack()
     {
         foreach (var target in _targets)
             ApplyDamage(target.transform.GetComponent<Enemy>());
     }
 
-    public virtual void TriggerAttackWithFloat(float number) {}
+    public virtual void AttackWithOffset(float number){}
 
     public void SetPlayerInfo(Player player)
     {

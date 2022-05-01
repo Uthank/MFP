@@ -6,9 +6,8 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private State _firstState;
 
     private Player _target;
-    private State _currentState;
 
-    public State Current => _currentState;
+    public State Current { get; private set; }
 
     private void Start()
     {
@@ -18,30 +17,30 @@ public class EnemyStateMachine : MonoBehaviour
 
     private void Update()
     {
-        if (_currentState == null)
+        if (Current == null)
             return;
 
-        var nextState = _currentState.GetNextState();
+        var nextState = Current.GetNextState();
         if (nextState != null)
             Transit(nextState);
     }
 
     public void Reset(State startState)
     {
-        _currentState = startState;
+        Current = startState;
 
-        if (_currentState != null)
-            _currentState.Enter(_target);
+        if (Current != null)
+            Current.Enter(_target);
     }
 
     private void Transit(State nextState)
     {
-        if (_currentState != null)
-            _currentState.Exit();
+        if (Current != null)
+            Current.Exit();
 
-        _currentState = nextState;
+        Current = nextState;
 
-        if (_currentState != null)
-            _currentState.Enter(_target);
+        if (Current != null)
+            Current.Enter(_target);
     }
 }

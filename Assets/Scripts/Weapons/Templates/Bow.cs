@@ -5,9 +5,9 @@ public class Bow : Weapon
 {
     [SerializeField] private Vector3 _shootOffset = new Vector3(1.5f, 1f, 0);
 
-    public override void TriggerAttack()
+    public override void Attack()
     {
-        GameObject arrow = Instantiate(_data.Ammo, transform.position + (transform.rotation * _shootOffset), transform.rotation);
-        arrow.GetComponent<Arrow>().Damage = _data.Damage;
+        Arrow arrow = Instantiate(_data.Ammo, transform.position + (transform.rotation * _shootOffset), transform.rotation);
+        arrow.Damage = _data.Damage;
     }
 }

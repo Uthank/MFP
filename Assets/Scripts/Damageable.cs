@@ -9,16 +9,17 @@ public class Damageable : MonoBehaviour
     protected string _dieAnimation = "Die";
     protected Animator _animator;
 
-    protected bool isAlive => _health > 0;
-
-    public UnityAction Dying;
+    public event UnityAction Dying;
     public UnityAction<float> HealthChanged;
+
+    protected bool IsAlive => _health > 0;
 
     protected virtual void Awake()
     {
         _animator = GetComponent<Animator>();
         _health = _maxHealth;
     }
+
     protected void Start()
     {
         HealthChanged?.Invoke(_health / _maxHealth);
@@ -26,7 +27,7 @@ public class Damageable : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
-        if (isAlive == true)
+        if (IsAlive == true)
         {
             _health -= damage;
             HealthChanged?.Invoke(_health / _maxHealth);

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9093804635295068389}
   - component: {fileID: 5062693246781341044}
-  - component: {fileID: 2738822222195673969}
+  - component: {fileID: 2692054353452049284}
   m_Layer: 0
   m_Name: RespawnPoint
   m_TagString: Untagged
@@ -45,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 4, z: 15}
   m_Center: {x: 0, y: 2, z: 0}
---- !u!114 &2738822222195673969
+--- !u!114 &2692054353452049284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
